@@ -1,4 +1,6 @@
 const weather = new Weather("Adelaide");
+const forecast = new Forecast("Adelaide");
+const ui = new Ui;
 
 // weather.changeLocation("Sydney");
 
@@ -9,7 +11,6 @@ searchbtn.addEventListener("click", (e) => {
 
   const newCityName = document.getElementById("cityName").value;
 
-  console.log(newCityName)
   weather.changeLocation(newCityName);
   getWeather()
 })
@@ -19,21 +20,15 @@ function getWeather() {
   weather.getWeather()
     .then(response => {
 
-      console.log(response.name)
-      // Ui.populateElements(response);
-      cityName = document.getElementById("city");
-      temp = document.getElementById("temp");
-      windSpeed = document.getElementById("windSpeed");
-
-      cityName.textContent = response.name;
-      temp.textContent = response.main.temp;
-      windSpeed.textContent = response.wind.speed;
-
+      ui.populateElements(response);
       getForecast();
     });
 
     function getForecast() {
-
+      forecast.getForecast()
+        .then(response => {
+          ui.populateForecast(response);
+        })
     }
 
 }

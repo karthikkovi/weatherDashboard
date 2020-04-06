@@ -1,4 +1,4 @@
-class forecast {
+class Forecast {
 
     constructor(cityName) {
         this.cityName = cityName;

@@ -23,3 +23,7 @@ h3 {
     border-color: grey;
     border-width: 0.25 rem;
 }
+
+#fiveDays {
+    display: none;
+}
