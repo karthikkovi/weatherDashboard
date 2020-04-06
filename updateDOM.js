@@ -7,7 +7,8 @@ class Ui {
         this.fTemp = document.getElementById("f-temp");
         this.fHumdity = document.getElementById("f-humidity");
         this.degree = "\u00B0";
-        this.date = moment().format("MM/DD/YYYY"); ;
+        this.date = moment().format("MM/DD/YYYY");
+        this.jsDate = new Date();
     }
 
     populateElements(weather) {
@@ -20,11 +21,10 @@ class Ui {
         document.getElementById("fiveDays").style.display = "block";
 
         const forecastarr = forecast.list;
-
+        let currentDate = parseInt(moment().format("DD"));
         console.log(forecastarr)
-        // forecastarr.foreach((day) => {
-        //     console.log(day.main.temp)
-        // })
+        console.log(this.jsDate.getUTCDate())
         this.fTemp.textContent = "";
     }
+
 }
