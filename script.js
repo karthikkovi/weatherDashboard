@@ -2,9 +2,18 @@ const weather = new Weather("Adelaide");
 
 // weather.changeLocation("Sydney");
 
-// Get Weather on load
+const searchbtn = document.getElementById("searchbtn");
 
-document.addEventListener("DOMContentLoaded", getWeather);
+searchbtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const newCityName = document.getElementById("cityName").value;
+
+  console.log(newCityName)
+  weather.changeLocation(newCityName);
+  getWeather()
+})
+
 
 function getWeather() {
   weather.getWeather()
@@ -19,5 +28,12 @@ function getWeather() {
       cityName.textContent = response.name;
       temp.textContent = response.main.temp;
       windSpeed.textContent = response.wind.speed;
+
+      getForecast();
     });
+
+    function getForecast() {
+
+    }
+
 }
