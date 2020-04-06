@@ -1,14 +1,14 @@
 class Ui {
     constructor() {
-        this.cityName = document.getElementById("cityName");
+        this.cityName = document.getElementById("city");
         this.temp = document.getElementById("temp");
         this.windSpeed = document.getElementById("windSpeed");
     }
 
-    updateDOM(weather) {
+    populateElements(weather) {
         this.cityName.textContent = weather.name;
-        this.temp.textContent = this.main.temp;
-        this.windSpeed.textContent = this.wind.windSpeed;
+        this.temp.textContent = main.temp;
+        this.windSpeed.textContent = wind.windSpeed;
     }
 }
 

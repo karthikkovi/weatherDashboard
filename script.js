@@ -11,6 +11,7 @@ function getWeather() {
     .then(response => {
 
       console.log(response.name)
+      // Ui.populateElements(response);
       cityName = document.getElementById("city");
       temp = document.getElementById("temp");
       windSpeed = document.getElementById("windSpeed");
