@@ -1,16 +1,17 @@
 class LocalStorage {
     constructor() {
-        this.cityArr;
+        this.cityArr = ["Adelaide", "Brisbane", "Canberra", "Darwin", "Hobart", "Melbourne", "Perth", "Sydney"];
         this.defaultCity = "Adelaide";
     }
 
     getLocationData() {
-        
+
     }
 
-    setLocationData(city) {
+    setLocationData() {
 
-        city = JSON.stringify(this.cityArr);
+        let city = JSON.stringify(this.cityArr);
         localStorage.setItem("city", city);
     }
+
 }
