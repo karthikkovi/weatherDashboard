@@ -1,16 +1,14 @@
-
-
-// To display City Name
-
-const cityDisplay = document.createElement("h2");
-cityDisplay.className += "mt-2 p-1";
-cityDisplay.innerText = 
-
-class UI {
-    constructor () {
+class Ui {
+    constructor() {
         this.cityName = document.getElementById("cityName");
         this.temp = document.getElementById("temp");
         this.windSpeed = document.getElementById("windSpeed");
+    }
+
+    updateDOM(weather) {
+        this.cityName.textContent = weather.name;
+        this.temp.textContent = this.main.temp;
+        this.windSpeed.textContent = this.wind.windSpeed;
     }
 }
 
