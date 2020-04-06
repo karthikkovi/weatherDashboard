@@ -15,7 +15,7 @@ class Weather {
         const responseData = await response.json();
 
         // Returning the fetch data
-        return responseData.main;
+        return responseData;
     }
   
     // Method to change the city

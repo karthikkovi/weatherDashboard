@@ -9,6 +9,6 @@ document.addEventListener("DOMContentLoaded", getWeather);
 function getWeather() {
   weather.getWeather()
     .then(response => {
-      console.log(response)
+      console.log(response);
     });
 }
