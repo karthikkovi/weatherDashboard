@@ -1,4 +1,4 @@
-class Ui {
+class Ui{
 
     constructor() {
         this.cityName = document.getElementById("city");
@@ -26,5 +26,7 @@ class Ui {
         console.log(this.jsDate.getUTCDate())
         this.fTemp.textContent = "";
     }
+
+
 
 }

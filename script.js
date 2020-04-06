@@ -1,7 +1,7 @@
 const weather = new Weather("Adelaide");
 const forecast = new Forecast("Adelaide");
-const ui = new Ui;
-const setLocalStorage = new LocalStorage;
+const ui = new Ui();
+const setLocalStorage = new Storage();
 
 // weather.changeLocation("Sydney");
 

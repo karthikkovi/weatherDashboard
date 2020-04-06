@@ -27,3 +27,7 @@ h3 {
 #fiveDays {
     display: none;
 }
+
+.list-group {
+    border: none;
+}
