@@ -1,8 +1,8 @@
-$(document).ready(function () {
+// Init weather
 
-  let cityName = "Adelaide";
-  const getWeatherData = new GetWeatherData(cityName);
+const weather = new Weather("Adelaide");
 
-  console.log(getWeatherData)
-  
-})
+weather.getWeather()
+  .then(results => {
+    console.log(results)
+  });
