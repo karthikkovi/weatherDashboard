@@ -10,3 +10,10 @@ h1 {
 h3 {
     color: #11999e;
 }
+
+#searchbtn {
+    height: calc(1.5em + .75rem + 2px);
+    background-color: #11999e;
+    border: none;
+    border-radius: 0.25rem;
+}
